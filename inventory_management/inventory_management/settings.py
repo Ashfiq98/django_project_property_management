@@ -43,7 +43,13 @@ INSTALLED_APPS = [
     'properties',
     "rest_framework",
     'django.contrib.gis',
+    'leaflet',
 ]
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (0, 0),  # Default center for the map
+    'DEFAULT_ZOOM': 10,        # Default zoom level
+    'TILES': 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',  # Tile URL for Leaflet maps
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

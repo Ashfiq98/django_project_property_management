@@ -14,6 +14,10 @@ class Location(models.Model):
     city = models.CharField(max_length=30)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        # Customize this as per your needs
+        return f"{self.title} ({self.city}, {self.country_code})"
 
 
 class Accommodation(models.Model):

@@ -1,0 +1,13 @@
+[
+    {
+        "US": "us",
+        "locations": [
+            {
+                "Los Angeles": "us/los-angeles"
+            },
+            {
+                "New York City": "us/new-york-city"
+            }
+        ]
+    }
+]
