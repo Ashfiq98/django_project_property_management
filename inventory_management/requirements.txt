@@ -5,3 +5,7 @@ sqlparse
 psycopg2-binary
 typing_extensions
 django-leaflet
+django-import-export
+pytest
+pytest-django
+coverage

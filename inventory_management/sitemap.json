@@ -1,5 +1,16 @@
 [
     {
+        "BD": "bd",
+        "locations": [
+            {
+                "Chittagong City": "bd/chittagong-city"
+            },
+            {
+                "Dhaka City": "bd/dhaka-city"
+            }
+        ]
+    },
+    {
         "US": "us",
         "locations": [
             {

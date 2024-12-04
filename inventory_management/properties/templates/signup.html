@@ -1,9 +1,27 @@
-<h2>Sign Up</h2>
-
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}  <!-- Render the form fields -->
-    <button type="submit">Create Account</button>
-</form>
-
-<p>Already have an account? <a href="/login/">Login here</a></p>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Linking CSS -->
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-card">
+            <h2>Sign Up</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.as_p }}
+                </div>
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+            <!-- <p class="login-link">
+                Already have an account? <a href="/login/">Login here</a>
+            </p> -->
+        </div>
+    </div>
+</body>
+</html>

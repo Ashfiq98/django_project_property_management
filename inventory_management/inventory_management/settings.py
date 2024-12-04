@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "rest_framework",
     'django.contrib.gis',
     'leaflet',
+    'import_export'
 ]
 LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (0, 0),  # Default center for the map
@@ -144,7 +145,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATICFILES_DIRS = [
+    BASE_DIR / "properties/static",  # Your app's static folder
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

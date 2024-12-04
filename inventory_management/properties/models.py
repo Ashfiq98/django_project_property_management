@@ -6,7 +6,7 @@ from django.contrib.gis.db import models as geomodels
 class Location(models.Model):
     id = models.CharField(max_length=20, primary_key=True)
     title = models.CharField(max_length=100)
-    center = geomodels.PointField()
+    center = geomodels.PointField(null=True)
     parent_id = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE)
     location_type = models.CharField(max_length=20)
     country_code = models.CharField(max_length=2)
