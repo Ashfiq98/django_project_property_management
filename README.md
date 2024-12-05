@@ -35,7 +35,7 @@ code . ## for opening inside vs code
 1. Ensure Docker and Docker Compose are installed on your system
 2. Make virtual environment
    ```bash
-   python -m venv venv
+   python -m venv venv ##if pyhon gives you error you can use python3
    ```
    For Linux/MacOS:
    ```bash
@@ -151,4 +151,12 @@ docker-compose exec web coverage report
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+## Important
+ * You can run anything inside web bash if you are facing any problem with `docker-compose exec web`
+ * Example :
+   ```bash
+   docker-compose exec web bash
+   python manage.py test ## you can run this type of code inside bash and it'll run correctly
+   ```
 
