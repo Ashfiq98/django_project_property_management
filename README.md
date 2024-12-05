@@ -115,16 +115,17 @@ docker-compose exec web python manage.py createsuperuser
 ### Dummy Data Examples
 
 ####  Location Data
- csv
+``` csv
 id,title,location_type,country_code,state_abbr,city
 LOC001,San Francisco,city,US,CA,San Francisco
 LOC002,Singapore City,city,SG,SG,Singapore
 LOC003,Sydney Metro,city,AU,NSW,Sydney
-
+```
 # Generate sitemap using Docker
+```bash
 docker-compose exec web bash
 python manage.py generate_sitemap
-
+```
 ### Running Tests
 
 ```bash
