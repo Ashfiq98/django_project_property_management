@@ -16,6 +16,7 @@ This is a Django-based Property Management System that provides a robust solutio
 ## Prerequisites
 
 - Docker
+- Postgress Sql
 - Docker Compose
 - Git
 
@@ -66,6 +67,19 @@ docker-compose exec web python manage.py createsuperuser
 - Web Application: `http://localhost:8000`
 - Admin Interface: `http://localhost:8000/admin`
   - Use the superuser credentials created in step 3
+ 
+### 5. For creating property Owners group:
+- After login as admin inside this link : `http://localhost:8000/admin`
+- Manually create a group , for example : 'property_owners'
+- Then give them permission to these :
+  * Properties | accomodation | Can add accomodation
+  * Properties | accomodation | Can change accomodation
+  * Properties | accomodation | Can delete accomodation
+  * Properties | accomodation | Can view accomodation
+  * Properties | location | Can view location
+     (without giving the permission of view location, user could't access the location dropdown field, that's why i 
+      gave this permission)
+
 
 ## Project Structure
 
@@ -80,6 +94,7 @@ docker-compose exec web python manage.py createsuperuser
   - Full access to all data
   - Can add accommodations, locations, users, and groups
   - Manages system-wide configurations
+  - If the admin grants staff status to a user, the user will be able to log in and view their own accommodations.
 
 - **Property Owners**:
   - Can only view, add, edit, and delete their own accommodations
@@ -89,9 +104,26 @@ docker-compose exec web python manage.py createsuperuser
 
 - CSV Import: Location data can be imported through the Django Admin interface
 - Geospatial Support: Leverages PostGIS for advanced location-based queries
-- Multilingual Support: Localized accommodation descriptions
 
-## Development
+### Data Import Instructions
+1. Login as admin
+2. Navigate to the locations section
+3. Click on import
+4. Select the prepared CSV file
+5. Confirm the data import
+
+### Dummy Data Examples
+
+####  Location Data
+ csv
+id,title,location_type,country_code,state_abbr,city
+LOC001,San Francisco,city,US,CA,San Francisco
+LOC002,Singapore City,city,SG,SG,Singapore
+LOC003,Sydney Metro,city,AU,NSW,Sydney
+
+# Generate sitemap using Docker
+docker-compose exec web bash
+python manage.py generate_sitemap
 
 ### Running Tests
 
