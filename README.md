@@ -14,11 +14,11 @@ This is a Django-based Property Management System that provides a robust solutio
 - CSV import functionality for location data
 
 ## Prerequisites
-
+- Python 3.9+ (for local development)
 - Docker
-- Postgress Sql
 - Docker Compose
 - Git
+
 
 ## Project Setup
 
