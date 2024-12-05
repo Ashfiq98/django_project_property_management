@@ -25,15 +25,28 @@ This is a Django-based Property Management System that provides a robust solutio
 
 ```bash
 git clone https://github.com/Ashfiq98/django_project_property_management.git
-cd inventory_management
+cd django_project_property_management/inventory_management
+code . ## for opening inside vs code
 ```
 
 ### 2. Environment Configuration
 
 1. Ensure Docker and Docker Compose are installed on your system
+2. Make virtual environment
+   ```bash
+   python -m venv venv
+   ```
+   For Linux/MacOS:
+   ```bash
+   source venv/bin/activate
+   ```
+   For Windows:
+   ```bash
+   venv\Scripts\activate
+   ```
 
 ### 3. Build and Run with Docker
-
+* Open termninal & : 
 ```bash
 # Build the Docker containers
 docker-compose build
